@@ -31,10 +31,12 @@ export const loginUserAsync = createAsyncThunk(
   'user/loginUser',
   async (loginInfo, { rejectWithValue }) => {
     try {
+      console.log(loginInfo)
       const response = await loginUser(loginInfo);
       return response.data;
     } catch (error) {
       console.log(error);
+      console.log(error.message,error.code)
       return rejectWithValue(error);
     }
   }
