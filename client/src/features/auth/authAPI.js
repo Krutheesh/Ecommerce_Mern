@@ -37,6 +37,7 @@ export function checkAuth() {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await fetch('/auth/check');
+      // console.log(response)
       if (response.ok) {
         const data = await response.json();
         resolve({ data });
