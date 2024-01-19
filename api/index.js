@@ -80,6 +80,9 @@ opts.secretOrKey = process.env.JWT_SECRET_KEY;
 //   res.sendFile(path.join(path.resolve(), "client", "build", "index.html"));
 // });
  server.use(express.static(path.resolve(__dirname, "client/build")));
+ server.get("*", (req, res) =>
+  res.sendFile(path.resolve("client/build", "index.html"))
+);
 server.use(cookieParser());
 server.use(
   session({
@@ -106,9 +109,7 @@ server.use("/cart", isAuth(), cartRouter.router);
 server.use("/orders", isAuth(), ordersRouter.router);
 
 // this line we add to make react router work in case of other routes doesnt match
-server.get("*", (req, res) =>
-  res.sendFile(path.resolve("client/build", "index.html"))
-);
+
 
 // Passport Strategies
 passport.use(
