@@ -49,7 +49,8 @@ export const checkAuthAsync = createAsyncThunk('user/checkAuth', async () => {
     console.log( response.data);
     return response.data;
   } catch (error) {
-    console.log(error);
+    console.log(error)
+    console.log(error.message);
   }
 });
 export const resetPasswordRequestAsync = createAsyncThunk(
