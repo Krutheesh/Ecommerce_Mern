@@ -76,7 +76,7 @@ opts.secretOrKey = process.env.JWT_SECRET_KEY;
 server.use(express.static(path.resolve(__dirname,"./client/build")));
 //  console.log(path.join(path.resolve(), "client", "build", "index.html"))
 server.get("*", (req, res) => {
-  res.sendFile(path.join(path.resolve(),  "index.html"));
+  res.sendFile(path.join(path.resolve(__dirname,"./client/build"),  "index.html"));
 });
 
 // server.use(express.static(path.resolve(__dirname, "client/build")));
