@@ -37,6 +37,8 @@ export function checkAuth() {
   return new Promise(async (resolve, reject) => {
     try {
       const response = await fetch('/auth/check');
+      
+      // error comes sometimes due to path change in index.js set for vercel
    
       if (response.ok) {
         const data = await response.json();
