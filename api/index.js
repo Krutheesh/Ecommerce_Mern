@@ -79,13 +79,15 @@ opts.secretOrKey = process.env.JWT_SECRET_KEY;
 //   res.sendFile(path.join(path.resolve('./client/build'),  "index.html"));
 // });
 // const __dirname = path.resolve();
-console.log(__dirname)
-const newDir = path.join(__dirname, '..');
-console.log(newDir)
-server.use(express.static(path.join(newDir, "./client/build")));
+console.log(__dirname);
+const newDir = path.join(__dirname, "..");
+console.log(newDir);
+server.use(express.static(path.join(newDir, '/client/build')));
 server.get("*", (req, res) =>
-  res.sendFile(path.join(newDir,"client","build", "index.html"))
+  res.sendFile(path.join(newDir, 'client', 'build', 'index.html'))
 );
+
+
 server.use(cookieParser());
 server.use(
   session({

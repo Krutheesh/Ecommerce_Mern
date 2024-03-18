@@ -39,9 +39,12 @@ export function checkAuth() {
       const response = await fetch('/auth/check');
       
       // error comes sometimes due to path change in index.js set for vercel
-   
+   console.log(response.ok)
       if (response.ok) {
+        console.log("hh")
+        console.log(response)
         const data = await response.json();
+        console.log(data)
         resolve({ data });
       } else {
         const error = await response.text();
@@ -49,6 +52,7 @@ export function checkAuth() {
       }
     } catch (error) {
       console.log(error);
+      console.log(error.message)
       reject( error );
     }
 
