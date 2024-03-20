@@ -79,13 +79,7 @@ opts.secretOrKey = process.env.JWT_SECRET_KEY;
 //   res.sendFile(path.join(path.resolve('./client/build'),  "index.html"));
 // });
 // const __dirname = path.resolve();
-console.log(__dirname);
-const newDir = path.join(__dirname, "..");
-console.log(newDir);
-server.use(express.static(path.join(newDir, '/client/build')));
-server.get("*", (req, res) =>
-  res.sendFile(path.join(newDir, 'client', 'build', 'index.html'))
-);
+
 
 
 server.use(cookieParser());
@@ -115,6 +109,14 @@ server.use("/orders", isAuth(), ordersRouter.router);
 
 // this line we add to make react router work in case of other routes doesnt match
 
+
+console.log(__dirname);
+const newDir = path.join(__dirname, "..");
+console.log(newDir);
+server.use(express.static(path.join(newDir, '/client/build')));
+server.get("*", (req, res) =>
+  res.sendFile(path.join(newDir, 'client', 'build', 'index.html'))
+);
 // Passport Strategies
 passport.use(
   "local",
