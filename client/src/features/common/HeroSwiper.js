@@ -25,14 +25,14 @@ export default function HeroSwiper({carousalImg}) {
         }}
         modules={[Autoplay,Pagination]}
         freeMode={true}
-        className="mySwiper h-[90vh]"
+        className="mySwiper  md:h-[90vh]"
      
       >
         {
           carousalImg&&carousalImg.map( (ele,ind) => (
             <SwiperSlide key={ind}>
               
-                <img src={ele} alt="" className='h-[90vh] w-[100vw] object-cover'/>
+                <img src={ele} alt="" className=' h-[40vh] md:h-[85vh] w-[100vw] object-cover'/>
               
               </SwiperSlide>
           ))
