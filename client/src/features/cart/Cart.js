@@ -46,7 +46,7 @@ export default function Cart() {
             </h1>
             <div className="flow-root">
               {status === 'loading' ? (
-                <Grid
+                  <div className='flex justify-center items-center h-[75vh] w-full'> <Grid
                   height="80"
                   width="80"
                   color="rgb(79, 70, 229) "
@@ -55,7 +55,8 @@ export default function Cart() {
                   wrapperStyle={{}}
                   wrapperClass=""
                   visible={true}
-                />
+                
+                /> </div>
               ) : null}
               <ul className="-my-6 divide-y divide-gray-200">
                 {items.map((item) => (

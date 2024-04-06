@@ -12,11 +12,11 @@ export default function UserOrders() {
   const dispatch = useDispatch();
   const orders = useSelector(selectUserOrders);
   const status = useSelector(selectUserInfoStatus);
-
+console.log('my orders')
   useEffect(() => {
     dispatch(fetchLoggedInUserOrderAsync());
   }, [dispatch]);
-
+console.log(orders)
   return (
     <div>
       {orders && orders.map((order) => (
@@ -114,7 +114,7 @@ export default function UserOrders() {
         </div>
       ))}
        {status === 'loading' ? (
-        <Grid
+          <div className='flex justify-center items-center h-[75vh] w-full'> <Grid
           height="80"
           width="80"
           color="rgb(79, 70, 229) "
@@ -123,7 +123,8 @@ export default function UserOrders() {
           wrapperStyle={{}}
           wrapperClass=""
           visible={true}
-        />
+        
+        /> </div>
       ) : null}
     </div>
   );

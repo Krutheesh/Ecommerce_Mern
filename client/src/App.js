@@ -32,20 +32,30 @@ import AdminOrdersPage from './pages/AdminOrdersPage';
 
 import StripeCheckout from './pages/StripeCheckout';
 import ResetPasswordPage from './pages/ResetPasswordPage';
-
+import MainPage from './features/auth/components/MainPage';
+import ProductList from './features/product/components/ProductList';
+import ProtectedPopular from './features/auth/components/ProtectedPopular';
+import { ScrollTop } from './features/common/ScrollTop';
 // const options = {
 //   timeout: 5000,
 //   position: positions.BOTTOM_LEFT,
 // };
 
 const router = createBrowserRouter([
+  
   {
     path: '/',
-    element: (
-      <Protected>
-        <Home></Home>
-      </Protected>
-    ),
+    element: <Home/>,
+    children:[
+      {
+        path:'/',
+        element:<MainPage/>
+      },{
+        path:'/products',
+        element:<ProtectedPopular> <ProductList/> </ProtectedPopular>
+      }
+     
+    ]
   },
   {
     path: '/admin',
@@ -82,9 +92,11 @@ const router = createBrowserRouter([
   {
     path: '/product-detail/:id',
     element: (
-      <Protected>
-        <ProductDetailPage></ProductDetailPage>
-      </Protected>
+     <ProtectedPopular>
+ <ProductDetailPage></ProductDetailPage>
+     </ProtectedPopular>
+       
+     
     ),
   },
   {
@@ -131,7 +143,7 @@ const router = createBrowserRouter([
     path: '/my-orders',
     element: (
       <Protected>
-        <UserOrdersPage></UserOrdersPage>{' '}
+        <UserOrdersPage></UserOrdersPage>
       </Protected>
     ),
   },
@@ -189,6 +201,7 @@ function App() {
   return (
     <>
       <div className="App">
+        
         {userChecked && (
        
             <RouterProvider router={router} />

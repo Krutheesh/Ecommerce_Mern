@@ -28,6 +28,7 @@ import {
 import { ITEMS_PER_PAGE } from '../../../app/constants';
 import Pagination from '../../common/Pagination';
 import { Grid } from 'react-loader-spinner';
+import { ScrollTop } from '../../common/ScrollTop';
 
 const sortOptions = [
   { name: 'Best Rating', sort: 'rating', order: 'desc', current: false },
@@ -97,7 +98,7 @@ export default function ProductList() {
 
   useEffect(() => {
     const pagination = { _page: page, _limit: ITEMS_PER_PAGE };
-    console.log("product list")
+    
     dispatch(fetchProductsByFiltersAsync({ filter, sort, pagination }));
   }, [dispatch, filter, sort, page]);
 
@@ -112,6 +113,8 @@ export default function ProductList() {
 
   return (
     <div className="bg-white">
+             <ScrollTop/>
+
       <div>
         <MobileFilter
           handleFilter={handleFilter}
@@ -343,6 +346,8 @@ function MobileFilter({
 function DesktopFilter({ handleFilter, filters }) {
   return (
     <form className="hidden lg:block">
+             <ScrollTop/>
+
       {filters.map((section) => (
         <Disclosure
           as="div"
@@ -396,13 +401,15 @@ function DesktopFilter({ handleFilter, filters }) {
   );
 }
 
-function ProductGrid({ products, status }) {
+export function ProductGrid({ products, status }) {
   return (
     <div className="bg-white">
+             <ScrollTop/>
+
       <div className="mx-auto max-w-2xl px-4 py-0 sm:px-6 sm:py-0 lg:max-w-7xl lg:px-8">
         <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:gap-x-8">
           {status === 'loading' ? (
-            <Grid
+              <div className='flex justify-center items-center h-[75vh] w-full'> <Grid
               height="80"
               width="80"
               color="rgb(79, 70, 229) "
@@ -411,7 +418,8 @@ function ProductGrid({ products, status }) {
               wrapperStyle={{}}
               wrapperClass=""
               visible={true}
-            />
+            
+            /> </div>
           ) : null}
           {products.map((product) => (
             <Link to={`/product-detail/${product.id}`} key={product.id}>
@@ -457,6 +465,7 @@ function ProductGrid({ products, status }) {
                 )}
               </div>
             </Link>
+            
           ))}
         </div>
       </div>

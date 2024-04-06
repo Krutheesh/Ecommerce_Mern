@@ -5,9 +5,9 @@ import Footer from "../features/common/Footer";
 function ProductDetailPage() {
     return ( 
         <div>
-            <NavBar>
+            <NavBar>   </NavBar>
                 <ProductDetail></ProductDetail>
-            </NavBar>
+         
             <Footer></Footer>
         </div>
      );

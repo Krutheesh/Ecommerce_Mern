@@ -19,6 +19,20 @@ export function createProduct(product) {
   });
 }
 
+export function fetchAllProducts() {
+  return new Promise(async (resolve) => {
+    const response = await fetch('/products', {
+      method: 'GET',
+      headers: { 'content-type': 'application/json' },
+    });
+    
+    const data = await response.json();
+    console.log(data)
+    resolve({ data });
+  });
+}
+
+
 export function updateProduct(update) {
   return new Promise(async (resolve) => {
     const response = await fetch(

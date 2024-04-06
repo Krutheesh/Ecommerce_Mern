@@ -57,7 +57,7 @@ export default function AdminProductDetail() {
   return (
     <div className="bg-white">
       {status === 'loading' ? (
-        <Grid
+          <div className='flex justify-center items-center h-[75vh] w-full'> <Grid
           height="80"
           width="80"
           color="rgb(79, 70, 229) "
@@ -66,7 +66,8 @@ export default function AdminProductDetail() {
           wrapperStyle={{}}
           wrapperClass=""
           visible={true}
-        />
+        
+        /> </div>
       ) : null}
       {product && (
         <div className="pt-6">

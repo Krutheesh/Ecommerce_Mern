@@ -91,7 +91,7 @@ function Checkout() {
       )}
 
       {status === 'loading' ? (
-        <Grid
+          <div className='flex justify-center items-center h-[75vh] w-full'> <Grid
           height="80"
           width="80"
           color="rgb(79, 70, 229) "
@@ -100,7 +100,8 @@ function Checkout() {
           wrapperStyle={{}}
           wrapperClass=""
           visible={true}
-        />
+        
+        /> </div>
       ) : <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 gap-x-8 gap-y-10 lg:grid-cols-5">
           <div className="lg:col-span-3">

@@ -13,6 +13,7 @@ const initialState = {
   products: [],
   brands: [],
   categories: [],
+  homeProducts:[],
   status: 'idle',
   totalItems: 0,
   selectedProduct: null,
@@ -70,6 +71,15 @@ export const updateProductAsync = createAsyncThunk(
   }
 );
 
+export const fetchAllProductsAsync = createAsyncThunk(
+  'product/all',
+  async() => {
+    const response = await fetchAllProducts()
+    console.log(response)
+    return response.data
+  }
+)
+
 export const productSlice = createSlice({
   name: 'product',
   initialState,
@@ -87,6 +97,15 @@ export const productSlice = createSlice({
         state.status = 'idle';
         state.products = action.payload.products;
         state.totalItems = action.payload.totalItems;
+      })
+      .addCase(fetchAllProductsAsync.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchAllProductsAsync.fulfilled, (state, action) => {
+        state.status = 'idle';
+        // console.log(action.payload)
+        state.homeProducts = action.payload;
+       
       })
       .addCase(fetchBrandsAsync.pending, (state) => {
         state.status = 'loading';

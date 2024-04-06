@@ -80,8 +80,6 @@ opts.secretOrKey = process.env.JWT_SECRET_KEY;
 // });
 // const __dirname = path.resolve();
 
-
-
 server.use(cookieParser());
 server.use(
   session({
@@ -98,7 +96,7 @@ server.use(
 );
 server.use(express.json()); // to parse req.body
 
-server.use("/products", isAuth(), productsRouter.router);
+server.use("/products", productsRouter.router);
 // we can also use JWT token for client-only auth
 server.use("/categories", isAuth(), categoriesRouter.router);
 server.use("/brands", isAuth(), brandsRouter.router);
@@ -109,14 +107,14 @@ server.use("/orders", isAuth(), ordersRouter.router);
 
 // this line we add to make react router work in case of other routes doesnt match
 
-
 console.log(__dirname);
 const newDir = path.join(__dirname, "..");
 console.log(newDir);
-server.use(express.static(path.join(newDir, '/client/build')));
+server.use(express.static(path.join(newDir, "/client/build")));
 server.get("*", (req, res) =>
-  res.sendFile(path.join(newDir, 'client', 'build', 'index.html'))
+  res.sendFile(path.join(newDir, "client", "build", "index.html"))
 );
+
 // Passport Strategies
 passport.use(
   "local",

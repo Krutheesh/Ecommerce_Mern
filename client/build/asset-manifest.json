@@ -1,15 +1,44 @@
 {
   "files": {
-    "main.css": "/static/css/main.8e2fae8f.css",
-    "main.js": "/static/js/main.eb74ac10.js",
-    "static/js/787.c875205c.chunk.js": "/static/js/787.c875205c.chunk.js",
+    "main.css": "/static/css/main.9bca00db.css",
+    "main.js": "/static/js/main.bdc4092f.js",
+    "static/js/787.723be057.chunk.js": "/static/js/787.723be057.chunk.js",
+    "static/media/fragrences.jpg": "/static/media/fragrences.dfe78d782836fca2a394.jpg",
+    "static/media/clothing.jpg": "/static/media/clothing.e3ba4f86c139f860f07e.jpg",
+    "static/media/groceries.jpg": "/static/media/groceries.ffd66f709c7d8b924c22.jpg",
+    "static/media/banner6.jpg": "/static/media/banner6.1736162defeae44533a8.jpg",
+    "static/media/banner8.jpg": "/static/media/banner8.0cb3c6a86c51bbe63ecc.jpg",
+    "static/media/Laptops.png": "/static/media/Laptops.752871ee75a840a6b145.png",
+    "static/media/decoration.png": "/static/media/decoration.3e4176a8c839430c68d7.png",
+    "static/media/skincare.png": "/static/media/skincare.cfec38d2b11740daa0c1.png",
+    "static/media/banner7.jpg": "/static/media/banner7.8bbe42e01966f48b6119.jpg",
+    "static/media/banner5.jpg": "/static/media/banner5.98a96839075fce566100.jpg",
+    "static/media/c2.jpeg": "/static/media/c2.4f62f4d8a3ff053abb2a.jpeg",
+    "static/media/coca.svg": "/static/media/coca.0e82a14b623c1c2003a97f38016b32f2.svg",
+    "static/media/puma.svg": "/static/media/puma.c2d40135b81bd9b2ebd13934678cfe73.svg",
+    "static/media/gopro.svg": "/static/media/gopro.a32451491671af1daee25017b4ef2006.svg",
+    "static/media/philips.svg": "/static/media/philips.3792d7f269143a67da1b5b865059263a.svg",
+    "static/media/levi.svg": "/static/media/levi.c0a223e3f5418a4fcefee3fbdff1941e.svg",
+    "static/media/adidas.svg": "/static/media/adidas.9118618332dcb4d3d61078b929b9fe57.svg",
+    "static/media/reebok.svg": "/static/media/reebok.61ad5e7d50417cd12ad36099b6c7c862.svg",
+    "static/media/lenovo.svg": "/static/media/lenovo.021538aa08d14208d2ec4d4ec7c44d34.svg",
+    "static/media/jbl.svg": "/static/media/jbl.e8eb3154e7354a5fd702098f6cf94d29.svg",
+    "static/media/xiaomi.svg": "/static/media/xiaomi.35a1880340c611e739f10a7bf8b9b640.svg",
+    "static/media/dell.svg": "/static/media/dell.3c774f0b26b58e17deb710f6060069d9.svg",
+    "static/media/nike.svg": "/static/media/nike.a07249834cdbdc95560384787b12583e.svg",
+    "static/media/gucci.svg": "/static/media/gucci.a792c983e7bf0d7016d9346b4b194a75.svg",
+    "static/media/vivo.svg": "/static/media/vivo.29af88a94cdb91cd42bc239c2e0af5d6.svg",
+    "static/media/lg.svg": "/static/media/lg.82b882149f589dc3fc405492e37550c1.svg",
+    "static/media/nokia.svg": "/static/media/nokia.af29f87f5883113c1e97c5321091b429.svg",
+    "static/media/mcdonald.svg": "/static/media/mcdonald.c0578cdb94039a45e60035e4ca9b35e8.svg",
+    "static/media/apple.svg": "/static/media/apple.f4376d7c3a3aa7624855d67a81ff9659.svg",
     "index.html": "/index.html",
-    "main.8e2fae8f.css.map": "/static/css/main.8e2fae8f.css.map",
-    "main.eb74ac10.js.map": "/static/js/main.eb74ac10.js.map",
-    "787.c875205c.chunk.js.map": "/static/js/787.c875205c.chunk.js.map"
+    "main.9bca00db.css.map": "/static/css/main.9bca00db.css.map",
+    "main.bdc4092f.js.map": "/static/js/main.bdc4092f.js.map",
+    "787.723be057.chunk.js.map": "/static/js/787.723be057.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.8e2fae8f.css",
-    "static/js/main.eb74ac10.js"
+    "static/css/main.9bca00db.css",
+    "static/js/main.bdc4092f.js"
   ]
 }
