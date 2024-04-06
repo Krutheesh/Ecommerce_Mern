@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.9bca00db.css",
-    "main.js": "/static/js/main.bdc4092f.js",
+    "main.js": "/static/js/main.084c6085.js",
     "static/js/787.723be057.chunk.js": "/static/js/787.723be057.chunk.js",
-    "static/media/fragrences.jpg": "/static/media/fragrences.dfe78d782836fca2a394.jpg",
-    "static/media/clothing.jpg": "/static/media/clothing.e3ba4f86c139f860f07e.jpg",
-    "static/media/groceries.jpg": "/static/media/groceries.ffd66f709c7d8b924c22.jpg",
     "static/media/banner6.jpg": "/static/media/banner6.1736162defeae44533a8.jpg",
     "static/media/banner8.jpg": "/static/media/banner8.0cb3c6a86c51bbe63ecc.jpg",
-    "static/media/Laptops.png": "/static/media/Laptops.752871ee75a840a6b145.png",
-    "static/media/decoration.png": "/static/media/decoration.3e4176a8c839430c68d7.png",
-    "static/media/skincare.png": "/static/media/skincare.cfec38d2b11740daa0c1.png",
+    "static/media/Laptops.png": "/static/media/Laptops.cc0dad3e4aa5b80da213.png",
+    "static/media/decoration.png": "/static/media/decoration.edec96657f3e80d06af7.png",
     "static/media/banner7.jpg": "/static/media/banner7.8bbe42e01966f48b6119.jpg",
+    "static/media/skincare.png": "/static/media/skincare.5ef9ff18bb5988e52223.png",
     "static/media/banner5.jpg": "/static/media/banner5.98a96839075fce566100.jpg",
+    "static/media/fragrences.jpg": "/static/media/fragrences.93b2715ed280cdf40a7c.jpg",
+    "static/media/clothing.jpg": "/static/media/clothing.fe88a43014f89f3e658b.jpg",
+    "static/media/groceries.jpg": "/static/media/groceries.6fe3eb1534590c1e4e3b.jpg",
     "static/media/c2.jpeg": "/static/media/c2.4f62f4d8a3ff053abb2a.jpeg",
     "static/media/coca.svg": "/static/media/coca.0e82a14b623c1c2003a97f38016b32f2.svg",
     "static/media/puma.svg": "/static/media/puma.c2d40135b81bd9b2ebd13934678cfe73.svg",
@@ -34,11 +34,11 @@
     "static/media/apple.svg": "/static/media/apple.f4376d7c3a3aa7624855d67a81ff9659.svg",
     "index.html": "/index.html",
     "main.9bca00db.css.map": "/static/css/main.9bca00db.css.map",
-    "main.bdc4092f.js.map": "/static/js/main.bdc4092f.js.map",
+    "main.084c6085.js.map": "/static/js/main.084c6085.js.map",
     "787.723be057.chunk.js.map": "/static/js/787.723be057.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9bca00db.css",
-    "static/js/main.bdc4092f.js"
+    "static/js/main.084c6085.js"
   ]
 }
