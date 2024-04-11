@@ -32,7 +32,7 @@ function Checkout() {
   const currentOrder = useSelector(selectCurrentOrder);
 
   const totalAmount = items.reduce(
-    (amount, item) =>  item.product?.discountPercentage *(item.product?.price/100) * item.quantity + amount,
+    (amount, item) =>  item.product?.price * item.quantity + amount,
     0
   );
   const totalItems = items.reduce((total, item) => item.quantity + total, 0);
@@ -428,9 +428,9 @@ function Checkout() {
                                   {item.product.title}
                                 </a>
                               </h3>
-                              <p className="ml-4">
+                              {/* <p className="ml-4">
                                 ${item.product.discountPrice}
-                              </p>
+                              </p> */}
                             </div>
                             <p className="mt-1 text-sm text-gray-500">
                               {item.product.brand}
@@ -476,7 +476,7 @@ function Checkout() {
               <div className="border-t border-gray-200 px-2 py-6 sm:px-2">
                 <div className="flex justify-between my-2 text-base font-medium text-gray-900">
                   <p>Subtotal</p>
-                  <p>$ {totalAmount}</p>
+                  <p>₹ {totalAmount}</p>
                 </div>
                 <div className="flex justify-between my-2 text-base font-medium text-gray-900">
                   <p>Total Items in Cart</p>

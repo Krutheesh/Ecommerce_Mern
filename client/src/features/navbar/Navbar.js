@@ -16,7 +16,7 @@ import { checkAuth } from '../auth/authAPI';
 const navigation = [
   { name: 'Home', link: '/', user: true },
   { name: 'Products', link: '/products', user: true },
-  { name: 'Products', link: '/admin', admin: true },
+ 
   { name: 'Orders', link: '/admin/orders', admin: true },
 
 ];
@@ -39,7 +39,7 @@ function NavBar() {
    useEffect(() => {
  if(!user.userInfo) navigate('/');
    },[user.userInfo])
-
+ const letter = (userInfo?.name)
   return (
     <>
       { (loggedInUserToken&&userInfo) ?<div className="min-h-full">
@@ -73,7 +73,7 @@ function NavBar() {
                               )}
                               aria-current={item.current ? 'page' : undefined}
                             >
-                              {item.name}
+                              {item.name} 
                             </Link>
                           ) : null
                         )}
@@ -89,7 +89,7 @@ function NavBar() {
                         >
                           
                           <ShoppingCartIcon
-                            className="h-6 w-6"
+                            className="h-7 w-7"
                             aria-hidden="true"
                           />
                         </button>
@@ -105,11 +105,13 @@ function NavBar() {
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="sr-only">Open user menu</span>
-                            <img
-                              className="h-8 w-8 rounded-full"
-                              src={userInfo.imageUrl}
-                              alt=""
-                            />
+                            <p className='h-10 w-10 rounded-full flex justify-center items-center bg-sky-500'>
+                      <span
+                        className="text-gray-300 font-semibold"
+                        
+                        alt=""
+                      > {userInfo.email.slice(0,1).toUpperCase()} </span>
+                      </p>
                           </Menu.Button>
                         </div>
                         <Transition
@@ -132,7 +134,7 @@ function NavBar() {
                                       'block px-4 py-2 text-sm text-gray-700'
                                     )}
                                   >
-                                    {item.name}
+                                    {item.name} 
                                   </Link>
                                 )}
                               </Menu.Item>
@@ -177,32 +179,37 @@ function NavBar() {
                       )}
                       aria-current={item.current ? 'page' : undefined}
                     >
-                      {item.name}
+                      {item.name} 
                     </Disclosure.Button>
                   ))}
                 </div>
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <img
-                        className="h-10 w-10 rounded-full"
-                        src={userInfo.imageUrl}
+                      <p className='h-10 w-10 rounded-full flex justify-center items-center bg-sky-500'>
+                      <span
+                        className="text-gray-300 font-semibold"
+                        
                         alt=""
-                      />
+                      > {userInfo.email.slice(0,1).toUpperCase()} </span>
+                      </p>
+            
+                      
                     </div>
                     <div className="ml-3">
                       <div className="text-base font-medium leading-none text-white">
                         {/* this should come from userInfo */}
                         {userInfo.name}
                       </div>
-                      <div className="text-sm font-medium leading-none text-gray-400">
+                      <div className="text-sm font-medium leading-none mr-5 text-gray-400">
                         {userInfo.email}
                       </div>
                     </div>
-                    <Link to="/cart">
+                    <div className=''>
+                    <Link to="/cart" className=''>
                       <button
                         type="button"
-                        className="ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                        className="ml-auto flex-shrink-0  rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
                       >
                         <ShoppingCartIcon
                           className="h-6 w-6"
@@ -210,6 +217,8 @@ function NavBar() {
                         />
                       </button>
                     </Link>
+                    </div>
+                    
                     {items.length > 0 && (
                       <span className="inline-flex items-center rounded-md bg-red-50 mb-7 -ml-3 px-2 py-1 text-xs font-medium text-red-700 ring-1 ring-inset ring-red-600/10">
                         {items.length}
@@ -224,7 +233,10 @@ function NavBar() {
                         href={item.href}
                         className="block rounded-md px-3 py-2 text-base font-medium text-gray-400 hover:bg-gray-700 hover:text-white"
                       >
-                        {item.name}
+                        <Link to={item.link}>
+                        {item.name}  
+                        </Link>
+                        
                       </Disclosure.Button>
                     ))}
                   </div>

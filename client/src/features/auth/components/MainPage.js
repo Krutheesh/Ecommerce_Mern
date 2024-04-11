@@ -29,15 +29,15 @@ const products = homeProducts.slice(1,7)
 <ScrollTop/>
       <HeroSwiper carousalImg={banners} />
       <div>
-      <h2 className='flex  justify-center items-center p-5 font-bold text-[2.2rem] text-purple-700'>Popular Items</h2>
+      <h2 className='flex  justify-center items-center p-5 font-bold text-[2.2rem] text-gray-800 '>Popular Items</h2>
         <ProductGrid products={products} status={status} home={true}/>
       </div>
       <div >
-        <h2 className='flex  justify-center items-center p-5 font-bold text-[2.2rem] text-purple-700'> Brands</h2>
+        <h2 className='flex  justify-center items-center p-5 font-bold text-[2.2rem] text-gray-800'> Brands</h2>
       <MySwiperComp/>
       </div>
       <div>
-      <h2 className='flex  justify-center items-center p-5 font-bold text-[2.2rem] text-purple-700'> Categories</h2>
+      <h2 className='flex  justify-center items-center p-5 font-bold text-[2.2rem] text-gray-800'> Categories</h2>
 <CategoriesMain/>
       </div>
     
