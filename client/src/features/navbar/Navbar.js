@@ -16,7 +16,6 @@ import { checkAuth } from '../auth/authAPI';
 const navigation = [
   { name: 'Home', link: '/', user: true },
   { name: 'Products', link: '/products', user: true },
- 
   { name: 'Orders', link: '/admin/orders', admin: true },
 
 ];
@@ -105,7 +104,7 @@ function NavBar() {
                         <div>
                           <Menu.Button className="flex max-w-xs items-center rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
                             <span className="sr-only">Open user menu</span>
-                            <p className='h-10 w-10 rounded-full flex justify-center items-center bg-sky-500'>
+                            <p className='h-10 w-10 rounded-full flex justify-center items-center bg-blue-700'>
                       <span
                         className="text-gray-300 font-semibold"
                         
@@ -186,7 +185,7 @@ function NavBar() {
                 <div className="border-t border-gray-700 pb-3 pt-4">
                   <div className="flex items-center px-5">
                     <div className="flex-shrink-0">
-                      <p className='h-10 w-10 rounded-full flex justify-center items-center bg-sky-500'>
+                      <p className='h-10 w-10 rounded-full flex justify-center items-center bg-blue-700'>
                       <span
                         className="text-gray-300 font-semibold"
                         
